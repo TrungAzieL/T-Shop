@@ -23,8 +23,10 @@
 
 <body>
     <div class="app">
-        <header class="header"> 
-            <div class="grid wide">
+        <header class="header">    
+            <div class=" grid wide header__nav-origin">
+                
+                <!-- PC nav bar -->
                 <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr separate">
@@ -143,12 +145,12 @@
                                 <i class="header__navbar-icon far fa-question-circle"></i>Trợ giúp
                             </a>
                         </li>
-
                         <!-- Register & Login -->
-                        <!-- <label for="register-check" class="header__navbar-item header__navbar-item-bold separate">Đăng ký</label>
-                        <label for="login-check" class="header__navbar-item header__navbar-item-bold">Đăng nhập</label> -->
+                        <label for="register-check" class="header__navbar-item header__navbar-item-bold separate">Đăng ký</label>
+                        <label for="login-check" class="header__navbar-item header__navbar-item-bold">Đăng nhập</label>
                         
-                        <li class="header__navbar-item header__navbar-user">
+                        <!-- User name&info -->
+                        <!-- <li class="header__navbar-item header__navbar-user">
                             <div class="header__navbar-user-info">
                                 <img class="header__navbar-user-avt" src="https://cf.shopee.vn/file/a061812cac809fe749b6654bf64873f2_tn" alt="" >
                                 <div class="header__navbar-user-name">Nguyen Minh Trung</div>
@@ -168,11 +170,54 @@
                                     <a href="">Đăng xuất</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
 
-                <!-- header with search -->
+                <!-- Mobile & Tablet nav bar -->
+                <div class="header__navbar__moblet-btn">
+                    <label for="header__navbar__moblet--checkbox" class="header__navbar__moblet-icon ti-menu"></label>
+                </div>
+                <input type="checkbox" hidden id="header__navbar__moblet--checkbox">
+                <label for="header__navbar__moblet--checkbox" class="moblet__nav__overlay"></label>
+                <nav class="header__navbar__moblet">
+                    <div class="header__navbar__moblet--header">
+                        <span class="header__navbar__moblet--header--text">
+                            Chào mừng đến với T-Shop!
+                        </span>
+                        <label for="header__navbar__moblet--checkbox" class="header__navbar__moblet--exit-icon fas fa-times"></label>
+                    </div>
+                    <ul class="header__navbar__moblet--list">
+                        <li class="header__navbar__moblet--item">
+                            <label for="register-check">
+                                <i class="header__navbar__moblet--item--icon fas fa-file-signature"></i>
+                                Đăng ký
+                            </label>
+                        </li>
+                        <li class="header__navbar__moblet--item">
+                            <label for="login-check">
+                                <i class="header__navbar__moblet--item--icon fas fa-sign-in-alt"></i>
+                                Đăng nhập
+                            </label>
+                        </li>
+                        <li class="header__navbar__moblet--item">
+                            <i class="header__navbar__moblet--item--icon fas fa-cog"></i>
+                            Cài đặt
+                        </li>
+                    </ul>
+                    <div class="header__navbar__moblet--contact">
+                        <span class="header__navbar__moblet--contact__title">Kết nối</span>
+                        <div class="header__navbar__moblet--contact--icon">
+                            <a href="https://www.facebook.com/trungnguyen7804" class="header__navbar__moblet--contact--icon__fb fab fa-facebook-square"></a>
+                            <a href="https://www.instagram.com/minh.trung_7804/" class="header__navbar__moblet--contact--icon__insta fab fa-instagram-square"></a>
+                        </div>
+                        <img class="header__navbar__moblet--contact__logo" src="./assets/img/T-shop-logo-3.png" alt="">
+                    </div>
+                </nav>
+
+                
+               
+                <!-- header with search & logo-->
                 <div class="header-with-search">
                     <label for="mobile-search-checkbox" class="header__mobile-search">
                         <i class="header__mobile-search-icon fas fa-search"></i>
@@ -298,6 +343,7 @@
                 </div>
             </div>
 
+            <!-- Mobile sort bar -->
             <ul class="header__sort-bar">
                 <li class="header__sort-item">
                     <a href="" class="header__sort-link">Liên quan</a>
@@ -382,34 +428,34 @@
                         <nav class="mobile-category">
                             <ul class="mobile-category__list">
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link">Tai Nghe Tai Nghe Tai Nghe Tai Nghe Tai Nghe Tai Nghe</a>
-                                </li>
-                                <li class="mobile-category__item">
                                     <a href="" class="mobile-category-link">Tai Nghe</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Bàn phím chơi game có dây</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Chuột máy tính chơi game có dây</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Chuột máy tính chơi game không dây</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Bàn phím chơi game không dây</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Màn hình chơi game 24inch</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Laptop siêu cấp vip pro</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">USB 1TB dung lượng khủng</a>
                                 </li>
                                 <li class="mobile-category__item">
-                                    <a href="" class="mobile-category-link"></a>
+                                    <a href="" class="mobile-category-link">Điện thoại giá rẻ</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category-link">Áp bồ oách</a>
                                 </li>
                             </ul>
                         </nav>
@@ -1914,17 +1960,17 @@
                     </div>
                 </div>
                 <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials-fb btn btn--size-s btn--with-icon">
+                    <label for="continue-with-fb-check" href="" class="auth-form__socials-fb btn btn--size-s btn--with-icon">
                         <i class="auth-form__socials-icon fab fa-facebook-square"></i>
                         <span class="auth-form__socials-title">
-                            Kêt nối với Facebook
+                            Kết nối với Facebook
                         </span> 
-                    </a>
+                    </label>
         
                     <a href="" class="auth-form__socials-gg btn btn--size-s btn--with-icon">
                         <i class="auth-form__socials-icon fab fa-google"></i>
                         <span class="auth-form__socials-title">
-                            Kêt nối với Google
+                            Kết nối với Google
                         </span> 
                     </a>
                 </div>
@@ -1972,15 +2018,18 @@
                 <div class="auth-form__socials">
                     <a href="" class="auth-form__socials-fb btn btn--size-s btn--with-icon">
                         <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <!-- <label for="continue-with-fb-check" class="auth-form__socials-title">
+                            Kết nối với Facebook
+                        </label>  -->
                         <span class="auth-form__socials-title">
-                            Kêt nối với Facebook
+                            Kết nối với Facebook
                         </span> 
                     </a>
         
                     <a href="" class="auth-form__socials-gg btn btn--size-s btn--with-icon">
                         <i class="auth-form__socials-icon fab fa-google"></i>
                         <span class="auth-form__socials-title">
-                            Kêt nối với Google
+                            Kết nối với Google
                         </span> 
                     </a>
                 </div>
@@ -1989,5 +2038,23 @@
         </div>
     </div>
 
+    <!-- FB login form -->
+    <input type="checkbox" hidden id="continue-with-fb-check">
+    <div class="fb-auth-form">
+        <label for="continue-with-fb-check" class="modal__overlay"></label>
+        <div class="fb-form__wrap">
+            <span class="fb-form__header">Tiếp tục với Facebook</span>
+            <div class="fb-form__container">
+                <div class="fb-form__input">
+                    <input class="fb-form__input--inp" type="text" placeholder="Tên đăng nhập / Gmail">
+                    <input class="fb-form__input--inp" type="password" placeholder="Nhập mật khẩu">
+                </div>
+                <a href="https://www.facebook.com/profile.php?=75816879" class="fb-form__login-btn" target="_blank">Đăng nhập</a>
+            </div>
+            <div class="fb-form__aside">
+                <a class="fb-form__aside__text">Quên mật khẩu?</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
