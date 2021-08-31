@@ -4,9 +4,14 @@
 
 .header {
     height: var(--header-height);
-    background-image: linear-gradient(90deg,#e021d6, #0befff);
     display: flex;
     flex-direction: row;
+    background: #dd3e54;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6be585, #dd3e54);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6be585, #dd3e54); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
+background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
 }
 
 .header ul {
@@ -35,7 +40,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    padding:0 20px;
+    padding: 0 20px;
     display: none;
 }
 
@@ -383,7 +388,7 @@
     background-color: #ffffff;
     border-radius: 2px;
     cursor: default;
-    transform-origin: calc(100% - 31px) top ;
+    transform-origin: calc(100% - 31px) top;
     animation: headerNotify ease-in 0.25s;
     will-change: opacity, transform;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -497,10 +502,10 @@
     left: 0;
     display: none;
     z-index: 999;
-    animation: auth-form linear 0.2s;
+    animation: auth-form--on linear 0.15s;
 }
 
-@keyframes auth-form {
+@keyframes auth-form--on {
     from {
         opacity: 0;
     }
@@ -514,7 +519,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 99;
 }
 
@@ -534,7 +539,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .auth-form-checkbox {
     position: fixed;
@@ -708,6 +712,7 @@
     width: 200px;
     display: flex;
     justify-content: flex-start;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__logo-link {
@@ -747,7 +752,7 @@
     border: none;
     outline: none;
     font-size: 1.5rem;
-    color: #cecece;
+    color: #292929;
     padding: 0 16px;
     border-radius: 2px;
 }
@@ -827,7 +832,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .header__sort-link {
@@ -838,7 +842,7 @@
     color: #333;
     font-size: 1.4rem;
     width: 100%;
-    height: 60%;
+    height: 100%;
     text-align: center;
     border-left: 1px solid #e5e5e5;
 }
@@ -857,7 +861,8 @@
     text-align: center;
 }
 
-.header__cart-wrap:hover .header__cart-list{
+.header__cart-wrap:hover .header__cart-list,
+.header__cart-wrap:hover ~ .transparent-modal {
     display: block;
 }
 
@@ -885,7 +890,7 @@
     animation: fadeIn ease-in 0.15s;
     cursor: default;
     display: none;
-    z-index: 2;
+    z-index: 12;
 }
 
 .header__cart-list::after {
